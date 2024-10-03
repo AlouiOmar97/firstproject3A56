@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AuthorController!{% endblock %}
+
+{% block body %}
+<h1>Author Details </h1>
+<div>
+<img src="{{asset(author.picture)}}" alt="{{author.username}}" height="150px" />
+<p><b>Username : </b> {{ author.username | upper }} </p>
+<p><b>Email : </b> {{ author.email }} </p>
+<p><b>Number of Books : </b> {{ author.nb_books }} </p>
+<a href="{{path('app_author_list')}}">Return to list.</a>
+</div>
+{% endblock %}
