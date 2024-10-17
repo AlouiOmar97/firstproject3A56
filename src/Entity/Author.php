@@ -120,4 +120,9 @@ class Author
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return 'Username : '.$this->username. ' Email : '. $this->email;
+    }
 }

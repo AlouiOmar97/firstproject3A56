@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+<h1> {{ title }} </h1>
+{{ form(form) }}
+
+{#
+{{ form_start(form)}}
+{{ form_label(form.ref)}}
+{{ form_widget(form.ref)}}
+{{ form_error(form.ref)}}<br>
+
+{{ form_row(form.ref)}}
+
+{{ form_end(form)}}
+#}
+{% endblock %}
