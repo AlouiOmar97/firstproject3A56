@@ -80,6 +80,15 @@ class BookController extends AbstractController
         ]);
     }
 
+    #[Route('/author', name: 'app_book_details')]
+    public function bookAuthor(BookRepository $bookRepository) {
+        $book = $bookRepository->findBookAuthor();
+        dd($book);
+        return $this->render('book/details.html.twig',[
+            'book' => $book
+        ]);
+    }
+
     #[Route('/delete/{ref}', name: 'app_book_delete')]
     public function deleteBook($ref, BookRepository $bookRepository, EntityManagerInterface $em){
         $book = $bookRepository->find($ref);

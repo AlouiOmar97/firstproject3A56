@@ -41,7 +41,7 @@ class AuthorController extends AbstractController
 
     #[Route('/author/details/{id}', name: 'app_author_details')]
     public function authorDetails($id, AuthorRepository $authorRepository){
-        $author = $authorRepository->findAuthorByUsernameDQL('Victor Hugo DB');
+        $author = $authorRepository->findAuthorByUsername('Victor');
         //$author = $authorRepository->findOneByNbBooks(100);
         //$author=$this->authors[$id - 1];
         dd($author);
